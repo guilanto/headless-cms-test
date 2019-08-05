@@ -7,6 +7,7 @@ export default class ImageGallery extends React.Component {
       return (
         <div className="gallery-item" key={index}>
           <img src={item.image.url} alt={item.image.alt} />
+          <div className="gallery-description">
           {RichText.render(item.image_description, this.props.prismicCtx.linkResolver)}
           {RichText.asText(item.link_label) !== "" ? (
             <p className="gallery-link">
@@ -15,6 +16,7 @@ export default class ImageGallery extends React.Component {
               </a>
             </p>
           ) : '' }
+          </div>
         </div>
       );
     });

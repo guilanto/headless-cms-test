@@ -1,6 +1,6 @@
 /* General */
 .container, header, footer {
-  max-width: 980px;
+  max-width: 1280px;
   margin: auto;
 }
 .content-section {
@@ -40,10 +40,16 @@
   font-size: 24px;
 }
 
+.full-width-image {
+  display: flex;
+  justify-content: center;
+}
+
 /* Header */
 .site-header {
   height: 30px;
   padding: 20px 0;
+  max-width: 900px
 }
 .site-header,
 .site-header a {
@@ -161,16 +167,19 @@
 
 /* Highlight Section */
 .highlight {
-  position: relative;
-  overflow: auto;
+  display: flex;
+  -webkit-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.63);
+  -moz-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.63);
+  box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.63);
 }
 .highlight-left {
-  width: 43%;
-  float: left;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 16px;
 }
 .highlight-right {
-  width: 48%;
-  float: right;
+  display: flex;
 }
 
 /* Gallery Section */
@@ -190,6 +199,13 @@
   -webkit-flex:  0 1 48%;
   -ms-flex:  0 1 48%;
   flex: 0 1 48%;
+  -webkit-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.63);
+  -moz-box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.63);
+  box-shadow: 6px 6px 10px 2px rgba(0,0,0,0.63);
+  margin-bottom: 32px;
+}
+.gallery-description {
+  padding-left: 16px;
 }
 .gallery-link {
   margin-top: -20px;
